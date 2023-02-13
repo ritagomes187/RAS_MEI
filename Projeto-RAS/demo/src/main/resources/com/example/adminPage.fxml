@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.adminPageController">
+   <children>
+      <TilePane prefHeight="54.0" prefWidth="1280.0" style="-fx-background-color: #0e451d;">
+         <children>
+            <ImageView fitHeight="72.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logotipo.png" />
+               </image>
+            </ImageView>
+            <Button mnemonicParsing="false" onMouseClicked="#logout" prefHeight="48.0" prefWidth="129.0" style="-fx-background-color: white; -fx-background-radius: 20;" text="LOGOUT" textFill="#0e451d">
+               <font>
+                  <Font name="SansSerif Bold" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </TilePane>
+      <Pane prefHeight="650.0" prefWidth="1280.0" style="-fx-background-color: white;">
+         <children>
+            <Pane layoutX="179.0" layoutY="99.0" onMouseClicked="#createPromotion" prefHeight="452.0" prefWidth="930.0" style="-fx-background-color: #0e451d; -fx-background-radius: 20;">
+               <children>
+                  <Button layoutX="364.0" layoutY="144.0" mnemonicParsing="false" onMouseClicked="#createPromotion" style="-fx-background-color: orange;" text="LAUNCH PROMOTION" textAlignment="CENTER" textFill="#0e451d">
+                     <font>
+                        <Font name="SansSerif Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="391.0" layoutY="313.0" mnemonicParsing="false" onMouseClicked="#changeEventState" style="-fx-background-color: orange;" text="CHANGE STATE" textAlignment="CENTER" textFill="#0e451d">
+                     <font>
+                        <Font name="SansSerif Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="419.0" layoutY="262.0" mnemonicParsing="false" onMouseClicked="#createEvent" style="-fx-background-color: white;" text="CREATE" textAlignment="CENTER" textFill="#0e451d">
+                     <font>
+                        <Font name="SansSerif Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Text fill="WHITE" layoutX="423.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EVENTS" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Line endX="183.0" layoutX="470.0" layoutY="120.0" startX="-198.5999755859375" stroke="WHITE" />
+                  <Line endX="183.0" layoutX="473.0" layoutY="241.0" startX="-198.5999755859375" stroke="WHITE" />
+                  <Text fill="WHITE" layoutX="393.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PROMOTIONS" textAlignment="CENTER">
+                     <font>
+                        <Font name="SansSerif Bold" size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</VBox>

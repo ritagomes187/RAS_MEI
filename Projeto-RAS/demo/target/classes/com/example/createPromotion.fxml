@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CustomMenuItem?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.createPromotionController">
+   <children>
+      <TilePane prefHeight="54.0" prefWidth="1280.0" style="-fx-background-color: #0e451d;">
+         <children>
+            <ImageView fitHeight="72.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logotipo.png" />
+               </image>
+            </ImageView>
+            <MenuButton alignment="CENTER" mnemonicParsing="false" prefHeight="48.0" prefWidth="129.0" style="-fx-background-color: white; -fx-background-radius: 20;" text="SPORTS" textAlignment="JUSTIFY" textFill="#0e451d">
+              <items>
+                  <CustomMenuItem mnemonicParsing="false" onAction="#showEvents" text="Unspecified Action">
+                     <content>
+                        <Button mnemonicParsing="false" style="-fx-background-color: white; -fx-background-radius: 20;" text="FOOTBALL" textFill="#0e451d">
+                           <font>
+                              <Font name="SansSerif Bold" size="18.0" />
+                           </font>
+                        </Button>
+                     </content>
+                  </CustomMenuItem>
+              </items>
+               <font>
+                  <Font name="SansSerif Bold" size="18.0" />
+               </font>
+            </MenuButton>
+         </children>
+      </TilePane>
+      <Pane prefHeight="650.0" prefWidth="1280.0" style="-fx-background-color: white;">
+         <children>
+            <Pane layoutX="915.0" layoutY="99.0" prefHeight="452.0" prefWidth="300.0" style="-fx-background-color: #0e451d; -fx-background-radius: 20;">
+               <children>
+                  <TextField layoutX="73.0" layoutY="39.0" prefHeight="34.0" prefWidth="166.0" style="-fx-text-fill: white; -fx-background-color: transparent;" text="PROMOTIONS">
+                     <font>
+                        <Font name="SansSerif Bold" size="18.0" />
+                     </font>
+                  </TextField>
+                  <ScrollPane layoutX="28.0" layoutY="92.0" prefHeight="275.0" prefWidth="246.0">
+                    <content>
+                      <AnchorPane fx:id="anchorPromos" minHeight="0.0" minWidth="0.0" prefHeight="102.0" prefWidth="230.0" style="-fx-background-color: ;" />
+                    </content>
+                  </ScrollPane>
+                  <Button alignment="CENTER" layoutX="108.0" layoutY="390.0" mnemonicParsing="false" style="-fx-background-color: orange;" text="SUBMIT" textAlignment="CENTER" textFill="#0e451d">
+                     <font>
+                        <Font name="SansSerif Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane layoutX="98.0" layoutY="99.0" prefHeight="452.0" prefWidth="722.0" style="-fx-border-color: #0e451d; -fx-border-radius: 20;">
+               <children>
+                  <ScrollPane layoutX="8.0" layoutY="7.0" prefHeight="437.0" prefWidth="706.0" style="-fx-background-color: transparent;">
+                    <content>
+                      <AnchorPane fx:id="anchorEvents" minHeight="0.0" minWidth="0.0" prefHeight="116.0" prefWidth="684.0" />
+                    </content>
+                  </ScrollPane>
+               </children>
+            </Pane>
+            <TextField editable="false" layoutX="127.0" layoutY="41.0" prefHeight="46.0" prefWidth="130.0" style="-fx-text-fill: #0e451d; -fx-background-color: transparent;" text="GAMES">
+               <font>
+                  <Font name="SansSerif Bold" size="24.0" />
+               </font>
+            </TextField>
+            <Text fx:id="info_submit" fill="RED" layoutX="940.0" layoutY="584.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="250.0" />
+         </children>
+      </Pane>
+   </children>
+</VBox>

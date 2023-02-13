@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CustomMenuItem?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#showEvents" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.specPageController">
+   <children>
+      <TilePane prefHeight="54.0" prefWidth="1280.0" style="-fx-background-color: #0e451d;">
+         <children>
+            <ImageView fitHeight="72.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logotipo.png" />
+               </image>
+            </ImageView>
+            <MenuButton alignment="CENTER" mnemonicParsing="false" prefHeight="48.0" prefWidth="129.0" style="-fx-background-color: white; -fx-background-radius: 20;" text="SPORTS" textAlignment="JUSTIFY" textFill="#0e451d">
+              <items>
+                  <CustomMenuItem mnemonicParsing="false" onAction="#showEvents" text="Unspecified Action">
+                     <content>
+                        <Button mnemonicParsing="false" style="-fx-background-color: white; -fx-background-radius: 20;" text="FOOTBALL" textFill="#0e451d">
+                           <font>
+                              <Font name="SansSerif Bold" size="18.0" />
+                           </font>
+                        </Button>
+                     </content>
+                  </CustomMenuItem>
+              </items>
+               <font>
+                  <Font name="SansSerif Bold" size="18.0" />
+               </font>
+            </MenuButton>
+            <Button alignment="CENTER" mnemonicParsing="false" onMouseClicked="#logout" prefHeight="48.0" prefWidth="134.0" style="-fx-background-color: white; -fx-background-radius: 20;" text="LOGOUT" textFill="#0e451d">
+               <font>
+                  <Font name="SansSerif Bold" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </TilePane>
+      <Pane prefHeight="650.0" prefWidth="1280.0" style="-fx-background-color: white;">
+         <children>
+            <Pane layoutX="915.0" layoutY="99.0" prefHeight="452.0" prefWidth="300.0" style="-fx-background-color: #0e451d; -fx-background-radius: 20;">
+               <children>
+                  <Pane layoutX="25.0" layoutY="60.0" prefHeight="332.0" prefWidth="250.0" style="-fx-background-color: white;">
+                     <children>
+                        <Button fx:id="yes" layoutX="47.0" layoutY="237.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="60.0" style="-fx-background-color: orange;" text="YES" textAlignment="CENTER" visible="false">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="no" layoutX="134.0" layoutY="237.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="60.0" style="-fx-border-color: orange; -fx-background-color: color; -fx-border-radius: 5;" text="NO" textAlignment="CENTER" visible="false">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="odd_change" alignment="CENTER" editable="false" layoutX="10.0" layoutY="18.0" style="-fx-border-color: white; -fx-background-color: white;" text="ODD CHANGE" visible="false">
+                           <font>
+                              <Font name="SansSerif Bold" size="16.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="teams" alignment="CENTER" editable="false" layoutX="31.0" layoutY="51.0" style="-fx-background-color: white;" text="Real Madrid - Granada" visible="false">
+                           <font>
+                              <Font name="SansSerif Bold" size="13.0" />
+                           </font>
+                        </TextField>
+                        <Text fx:id="message" layoutX="31.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="O jogo Real Madrid - Grana encontra-se ativo. Tem a certeza que pretender contiuar?" textAlignment="CENTER" visible="false" wrappingWidth="188.072265625" />
+                        <Pane fx:id="odd_pane" layoutX="48.0" layoutY="195.0" prefHeight="85.0" prefWidth="157.0" style="-fx-background-color: #0e451d; -fx-background-radius: 20;" visible="false">
+                           <children>
+                              <Text fx:id="team_name" fill="#8c6014" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Real Madrid" textAlignment="CENTER" wrappingWidth="156.99999999999977" />
+                              <Text fill="WHITE" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New odd:" textAlignment="CENTER" wrappingWidth="156.99999999999977" />
+                              <TextField fx:id="odd_insert" alignment="CENTER" layoutX="19.0" layoutY="47.0" prefHeight="24.0" prefWidth="120.0" promptText="Insert odd here" style="-fx-background-color: white;" />
+                           </children>
+                        </Pane>
+                        <Button fx:id="change_button" layoutX="69.0" layoutY="294.0" mnemonicParsing="false" onMouseClicked="#changeOdd" style="-fx-background-color: orange;" text="CHANGE ODD" textAlignment="CENTER" visible="false">
+                           <font>
+                              <Font name="SansSerif Bold" size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <Pane layoutX="98.0" layoutY="99.0" prefHeight="452.0" prefWidth="722.0" style="-fx-border-color: #0e451d; -fx-border-radius: 20;">
+               <children>
+                  <ScrollPane layoutX="8.0" layoutY="7.0" prefHeight="437.0" prefWidth="706.0" style="-fx-background-color: transparent;">
+                    <content>
+                      <AnchorPane fx:id="anchorEvents" minHeight="0.0" minWidth="0.0" prefHeight="116.0" prefWidth="684.0" />
+                    </content>
+                  </ScrollPane>
+               </children>
+            </Pane>
+            <TextField editable="false" layoutX="127.0" layoutY="41.0" prefHeight="46.0" prefWidth="130.0" style="-fx-text-fill: #0e451d; -fx-background-color: transparent;" text="GAMES">
+               <font>
+                  <Font name="SansSerif Bold" size="24.0" />
+               </font>
+            </TextField>
+         </children>
+      </Pane>
+   </children>
+</VBox>
